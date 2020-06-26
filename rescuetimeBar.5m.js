@@ -48,15 +48,15 @@ function calcTarget(goal, step) {
 }
 
 function getProgressBar(score) {
-  var bar = "▁▁▁";
+  var bar = "○○○";
   // squares close based on your goal
-  if(score < calcTarget(goal, 15)) { bar = "▁▁▁"}
-  else if (score <= calcTarget(goal, 30)) { bar = "▄▁▁"}
-  else if (score <= calcTarget(goal, 45)) { bar = "▇▁▁"}
-  else if (score <= calcTarget(goal, 60)) { bar = "▇▄▁"}
-  else if (score <= calcTarget(goal, 75)) { bar = "▇▇▁"} 
-  else if (score <= calcTarget(goal, 90)) { bar = "▇▇▄"} 
-  else if (score >= calcTarget(goal, 95)) { bar = "▇▇▇"}
+  if(score < calcTarget(goal, 15)) { bar = "○○○"}
+  else if (score <= calcTarget(goal, 30)) { bar = "◐○○"}
+  else if (score <= calcTarget(goal, 45)) { bar = "●○○"}
+  else if (score <= calcTarget(goal, 60)) { bar = "●◐○"}
+  else if (score <= calcTarget(goal, 75)) { bar = "●●○"} 
+  else if (score <= calcTarget(goal, 90)) { bar = "●●◐"} 
+  else if (score >= calcTarget(goal, 95)) { bar = "●●●"}
   return bar;
 }
 
