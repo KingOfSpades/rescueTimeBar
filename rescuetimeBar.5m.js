@@ -56,7 +56,7 @@ function getProgressBar(score) {
   else if (score <= calcTarget(goal, 60)) { bar = "●◐○"}
   else if (score <= calcTarget(goal, 75)) { bar = "●●○"} 
   else if (score <= calcTarget(goal, 90)) { bar = "●●◐"} 
-  else if (score >= calcTarget(goal, 95)) { bar = "●●●"}
+  else if (score >= calcTarget(goal, 91)) { bar = "●●●"}
   return bar;
 }
 
