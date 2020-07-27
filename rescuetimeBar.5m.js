@@ -49,7 +49,7 @@ function calcTarget(goal, step) {
 
 function getProgressBar(score) {
   var bar = "○○○";
-  // squares close based on your goal
+  // circles close based on your goal
   if(score < calcTarget(goal, 15)) { bar = "○○○"}
   else if (score <= calcTarget(goal, 30)) { bar = "◐○○"}
   else if (score <= calcTarget(goal, 45)) { bar = "●○○"}
