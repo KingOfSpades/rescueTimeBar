@@ -9,6 +9,11 @@ const fs = require('fs');
 // Set your target score
 const goal = 70;
 
+// Enable filtering based on working schedule
+// The productivity date is filterd using a filter provided by
+// Rescue time to filter on 'During working hours' 
+// (it's not well documented yet). You need a premium acount for it.
+var restrict_to_working_hours = false;
 
 // Rescue time API key. Need to manually create an api.key file
 const PATH = `${process.env.HOME}/Library/RescueTime.com/api.key`;
@@ -20,9 +25,11 @@ const ENDPOINT_ACTIVITIES = 'https://www.rescuetime.com/anapi/data.json';
 const URL_DASH_DAY = 'https://www.rescuetime.com/dashboard/for/the/day/of/';
 
 let endpoint_week = `${ENDPOINT_FEED}?key=${API_KEY}`;
-// The schedule id sets the ID for the filter 'During Working Hours'
-let endpoint_today = `${ENDPOINT_ACTIVITIES}?key=${API_KEY}&perspective=interval&restrict_kind=productivity&restrict_kind=productivity&restrict_schedule_id=7304874`;
 
+let endpoint_today = `${ENDPOINT_ACTIVITIES}?key=${API_KEY}&perspective=interval&restrict_kind=productivity&restrict_kind=productivity`
+if (restrict_to_working_hours) {
+  lendpoint_today = `${ENDPOINT_ACTIVITIES}?key=${API_KEY}&perspective=interval&restrict_kind=productivity&restrict_kind=productivity&restrict_schedule_id=7304874`;
+}
 
 function request(endpoint) {
   return new Promise((resolve, reject) => {
@@ -105,9 +112,13 @@ request(endpoint_today).then((json) => {
     score = Math.floor((1*vpHours + .75*pHours + .5*nHours + .25*dHours + 0*vdHours)/today_hours*100);
   }
 
+  let todays_message = "Today's score: ";
+  if (restrict_to_working_hours) {
+    todays_message = "Today's score during working hours: "
+  }
   console.log(`${getProgressBar(score)}`);
   console.log(`---`);
-  console.log(`Today's score during working hours: ${score} Click for more info ⇪ | href=https://www.rescuetime.com/dashboard`);
+  console.log(`${todays_message} ${score} Click for more info ⇪ | href=https://www.rescuetime.com/dashboard`);
   console.log(`Target score 🎯 ${goal}`);
   console.log(`${hoursToString(today_hours)} - Time Logged Today`);
   console.log(`${hoursToString(vpHours)} - Verry Productive Today`);
@@ -119,4 +130,3 @@ request(endpoint_today).then((json) => {
 }).catch((error) => {
   console.log(error);
 })
-

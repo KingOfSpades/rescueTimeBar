@@ -20,13 +20,4 @@ Credits to for the original code and idea: https://github.com/jckyeh/bitbar-resc
 8. Hit Refresh from one of the BitBar menus.
 
 # Sidenote
-The productivity date is filterd using a filter provided by Rescue time to filter on 'During working hours' (it's not well documented yet). You need a premium acount for it. Don't want the filter or want all data? Change it on line `24`
-
-Change
-```
-let endpoint_today = `${ENDPOINT_ACTIVITIES}?key=${API_KEY}&perspective=interval&restrict_kind=productivity&restrict_kind=productivity&restrict_schedule_id=7304874`;
-```
-To
-```
-let endpoint_today = `${ENDPOINT_ACTIVITIES}?key=${API_KEY}&perspective=interval&restrict_kind=productivity&restrict_kind=productivity`;
-```
+The productivity date is filterd using a filter provided by Rescue time to filter on 'During working hours' (it's not well documented yet). You need a premium acount for it. Want to use the filer? Set `restrict_to_working_hours = false;` to `true`
