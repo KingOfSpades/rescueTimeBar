@@ -54,14 +54,6 @@ function calcTarget(goal, step) {
   return goal / 100 * step;
 }
 
-function range(start, end) {
-  var ans = [];
-  for (let i = start; i <= end; i++) {
-      ans.push(i);
-  }
-  return ans;
-}
-
 function getProgressBar(score) {
   var bar = "○○○";
   // circles close based on your goal
