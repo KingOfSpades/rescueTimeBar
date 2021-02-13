@@ -1,5 +1,5 @@
 # Was this helpfull?
-Did you find this usefull? Consider buying me a coffe over at [BuyMeaCoffee](https://www.buymeacoffee.com/cabenstein) \
+Did you find this usefull? Consider buying me a coffe over at [BuyMeACoffee](https://www.buymeacoffee.com/cabenstein) \
 ![buymeacoffee.com/cabenstein](default-yellow.png)
 
 # Rescue Time Bar Plugin
