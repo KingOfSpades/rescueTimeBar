@@ -1,3 +1,6 @@
+Did you find this usefull? Consider buying me a coffe over at [BuyMeaCoffe](https://www.buymeacoffee.com/cabenstein)
+![https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png](https://www.buymeacoffee.com/cabenstein)
+
 # Rescue Time Bar Plugin
 This plugin gets you current productivity pulse and translates it to a 'bar' graph like so:
 
