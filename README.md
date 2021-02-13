@@ -1,5 +1,6 @@
+# Was this helpfull?
 Did you find this usefull? Consider buying me a coffe over at [BuyMeaCoffee](https://www.buymeacoffee.com/cabenstein) \
-![default-yellow.png](https://www.buymeacoffee.com/cabenstein)
+![buymeacoffee.com/cabenstein](default-yellow.png)
 
 # Rescue Time Bar Plugin
 This plugin gets you current productivity pulse and translates it to a 'bar' graph like so:
